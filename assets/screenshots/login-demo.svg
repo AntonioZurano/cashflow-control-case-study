@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">CashFlow Control &#8212; Acceso (demo ficticia)</title>
+  <desc id="desc">Pantalla de inicio de sesi&#243;n con datos ficticios</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8eef4"/>
+      <stop offset="100%" stop-color="#d5e0ea"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#1a2b3c" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+
+  <g opacity="0.35" stroke="#9bb0c4" stroke-width="1">
+    <path d="M0 120 H1200 M0 240 H1200 M0 360 H1200 M0 480 H1200 M0 600 H1200"/>
+    <path d="M150 0 V720 M300 0 V720 M450 0 V720 M600 0 V720 M750 0 V720 M900 0 V720 M1050 0 V720"/>
+  </g>
+
+  <rect x="180" y="110" width="380" height="500" rx="12" fill="#1e3a4c"/>
+  <circle cx="280" cy="250" r="36" fill="#2f6f7e"/>
+  <path d="M262 250 h36 M280 232 v36" stroke="#e8f4f6" stroke-width="4" stroke-linecap="round"/>
+  <text x="340" y="242" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f4f8fa">CashFlow</text>
+  <text x="340" y="268" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#9ec9d4">Control</text>
+  <text x="220" y="340" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#f4f8fa">Tesorer&#237;a centralizada</text>
+  <text x="220" y="378" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#b7c9d4">Registra, clasifica y analiza movimientos</text>
+  <text x="220" y="400" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#b7c9d4">en un entorno interno controlado.</text>
+  <text x="220" y="560" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#7f97a6">Demo ficticia &#183; Sin datos reales</text>
+
+  <rect x="560" y="110" width="460" height="500" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="610" y="190" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e3a4c">Iniciar sesi&#243;n</text>
+  <text x="610" y="222" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#5f7383">Acceso restringido a la red local</text>
+
+  <text x="610" y="280" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#3d5364">Usuario</text>
+  <rect x="610" y="292" width="360" height="44" rx="8" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="628" y="320" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#1e3a4c">ana.demo</text>
+
+  <text x="610" y="372" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#3d5364">Contrase&#241;a</text>
+  <rect x="610" y="384" width="360" height="44" rx="8" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="628" y="412" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" letter-spacing="2" fill="#1e3a4c">&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;</text>
+
+  <rect x="610" y="460" width="360" height="48" rx="8" fill="#2f6f7e"/>
+  <text x="760" y="490" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Entrar</text>
+
+  <text x="790" y="545" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#7f97a6">Usuario y contrase&#241;a de demostraci&#243;n</text>
+</svg>

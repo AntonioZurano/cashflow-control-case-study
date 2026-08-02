@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">CashFlow Control &#8212; Usuarios (demo ficticia)</title>
+  <desc id="desc">Administraci&#243;n de usuarios con roles ficticios</desc>
+
+  <rect width="1200" height="720" fill="#eef2f6"/>
+
+  <rect width="220" height="720" fill="#1e3a4c"/>
+  <circle cx="48" cy="48" r="18" fill="#2f6f7e"/>
+  <path d="M40 48 h16 M48 40 v16" stroke="#e8f4f6" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="76" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#f4f8fa">CashFlow</text>
+  <text x="76" y="62" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#9ec9d4">Control</text>
+
+  <text x="36" y="135" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#b7c9d4">Dashboard</text>
+  <text x="36" y="175" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#b7c9d4">Movimientos</text>
+  <text x="36" y="215" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#b7c9d4">Importar</text>
+  <rect x="16" y="230" width="188" height="40" rx="8" fill="#2f6f7e"/>
+  <text x="36" y="255" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Usuarios</text>
+  <text x="36" y="305" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#b7c9d4">Copias</text>
+  <text x="36" y="680" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#7f97a6">Demo ficticia</text>
+
+  <rect x="220" width="980" height="64" fill="#ffffff"/>
+  <text x="248" y="40" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1e3a4c">Administraci&#243;n de usuarios</text>
+  <rect x="960" y="18" width="180" height="32" rx="6" fill="#2f6f7e"/>
+  <text x="1050" y="39" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">+ Nuevo usuario</text>
+
+  <rect x="248" y="88" width="900" height="52" rx="10" fill="#e8f2f4" stroke="#b7d4da"/>
+  <text x="272" y="120" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#1e3a4c">Los roles restringen funcionalidades administrativas. Operaciones protegidas desde el backend. Datos ficticios.</text>
+
+  <rect x="248" y="160" width="900" height="460" rx="10" fill="#ffffff"/>
+  <rect x="248" y="160" width="900" height="44" rx="10" fill="#f4f7fa"/>
+  <rect x="248" y="190" width="900" height="14" fill="#f4f7fa"/>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#3d5364">
+    <text x="272" y="188">Usuario</text>
+    <text x="480" y="188">Nombre</text>
+    <text x="700" y="188">Rol</text>
+    <text x="860" y="188">Estado</text>
+    <text x="1000" y="188">Acciones</text>
+  </g>
+
+  <circle cx="290" cy="240" r="16" fill="#2f6f7e"/>
+  <text x="290" y="245" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">AD</text>
+  <text x="320" y="236" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e3a4c">admin.demo</text>
+  <text x="320" y="254" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#7f97a6">admin@demo.local</text>
+  <text x="480" y="246" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#1e3a4c">Ana Demo</text>
+  <rect x="700" y="232" width="72" height="24" rx="12" fill="#1e3a4c"/>
+  <text x="736" y="248" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff">Admin</text>
+  <rect x="860" y="232" width="72" height="24" rx="12" fill="#e5f5ec"/>
+  <text x="896" y="248" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f7a4d">Activo</text>
+  <text x="1000" y="248" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#2f6f7e">Editar</text>
+  <line x1="268" y1="276" x2="1128" y2="276" stroke="#e6ebf0"/>
+
+  <circle cx="290" cy="316" r="16" fill="#5f7383"/>
+  <text x="290" y="321" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">LR</text>
+  <text x="320" y="312" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e3a4c">lucia.revision</text>
+  <text x="320" y="330" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#7f97a6">lucia@demo.local</text>
+  <text x="480" y="322" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#1e3a4c">Luc&#237;a Revisi&#243;n</text>
+  <rect x="700" y="308" width="84" height="24" rx="12" fill="#e8eef4"/>
+  <text x="742" y="324" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#3d5364">Consulta</text>
+  <rect x="860" y="308" width="72" height="24" rx="12" fill="#e5f5ec"/>
+  <text x="896" y="324" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f7a4d">Activo</text>
+  <text x="1000" y="324" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#2f6f7e">Editar</text>
+  <line x1="268" y1="352" x2="1128" y2="352" stroke="#e6ebf0"/>
+
+  <circle cx="290" cy="392" r="16" fill="#c9a227"/>
+  <text x="290" y="397" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">MG</text>
+  <text x="320" y="388" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e3a4c">marco.gestion</text>
+  <text x="320" y="406" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#7f97a6">marco@demo.local</text>
+  <text x="480" y="398" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#1e3a4c">Marco Gesti&#243;n</text>
+  <rect x="700" y="384" width="84" height="24" rx="12" fill="#e8eef4"/>
+  <text x="742" y="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#3d5364">Consulta</text>
+  <rect x="860" y="384" width="72" height="24" rx="12" fill="#e5f5ec"/>
+  <text x="896" y="400" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f7a4d">Activo</text>
+  <text x="1000" y="400" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#2f6f7e">Editar</text>
+  <line x1="268" y1="428" x2="1128" y2="428" stroke="#e6ebf0"/>
+
+  <circle cx="290" cy="468" r="16" fill="#b33b3b"/>
+  <text x="290" y="473" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">ES</text>
+  <text x="320" y="464" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e3a4c">elena.soporte</text>
+  <text x="320" y="482" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#7f97a6">elena@demo.local</text>
+  <text x="480" y="474" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#1e3a4c">Elena Soporte</text>
+  <rect x="700" y="460" width="72" height="24" rx="12" fill="#1e3a4c"/>
+  <text x="736" y="476" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff">Admin</text>
+  <rect x="860" y="460" width="88" height="24" rx="12" fill="#f7e8e8"/>
+  <text x="904" y="476" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#b33b3b">Inactivo</text>
+  <text x="1000" y="476" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#2f6f7e">Editar</text>
+  <line x1="268" y1="504" x2="1128" y2="504" stroke="#e6ebf0"/>
+
+  <circle cx="290" cy="544" r="16" fill="#5f7383"/>
+  <text x="290" y="549" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">PV</text>
+  <text x="320" y="540" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e3a4c">pablo.vista</text>
+  <text x="320" y="558" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#7f97a6">pablo@demo.local</text>
+  <text x="480" y="550" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#1e3a4c">Pablo Vista</text>
+  <rect x="700" y="536" width="84" height="24" rx="12" fill="#e8eef4"/>
+  <text x="742" y="552" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#3d5364">Consulta</text>
+  <rect x="860" y="536" width="72" height="24" rx="12" fill="#e5f5ec"/>
+  <text x="896" y="552" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f7a4d">Activo</text>
+  <text x="1000" y="552" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#2f6f7e">Editar</text>
+
+  <text x="272" y="600" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#7f97a6">5 usuarios de demostraci&#243;n &#183; sin datos reales</text>
+</svg>

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">CashFlow Control &#8212; Movimientos (demo ficticia)</title>
+  <desc id="desc">Tabla de movimientos con filtros, categor&#237;as e importes ficticios</desc>
+
+  <rect width="1200" height="760" fill="#eef2f6"/>
+
+  <rect width="220" height="760" fill="#1e3a4c"/>
+  <circle cx="48" cy="48" r="18" fill="#2f6f7e"/>
+  <path d="M40 48 h16 M48 40 v16" stroke="#e8f4f6" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="76" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#f4f8fa">CashFlow</text>
+  <text x="76" y="62" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#9ec9d4">Control</text>
+
+  <text x="36" y="135" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#b7c9d4">Dashboard</text>
+  <rect x="16" y="150" width="188" height="40" rx="8" fill="#2f6f7e"/>
+  <text x="36" y="175" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Movimientos</text>
+  <text x="36" y="225" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#b7c9d4">Importar</text>
+  <text x="36" y="265" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#b7c9d4">Usuarios</text>
+  <text x="36" y="305" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#b7c9d4">Copias</text>
+  <text x="36" y="720" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#7f97a6">Demo ficticia</text>
+
+  <rect x="220" width="980" height="64" fill="#ffffff"/>
+  <text x="248" y="40" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1e3a4c">Movimientos</text>
+  <rect x="980" y="18" width="160" height="32" rx="6" fill="#2f6f7e"/>
+  <text x="1060" y="39" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">+ Nuevo</text>
+
+  <rect x="248" y="88" width="900" height="72" rx="10" fill="#ffffff"/>
+  <text x="268" y="118" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#5f7383">Desde</text>
+  <rect x="268" y="126" width="120" height="22" rx="4" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="276" y="142" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#1e3a4c">01/01/2026</text>
+
+  <text x="410" y="118" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#5f7383">Hasta</text>
+  <rect x="410" y="126" width="120" height="22" rx="4" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="418" y="142" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#1e3a4c">30/06/2026</text>
+
+  <text x="552" y="118" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#5f7383">Categor&#237;a</text>
+  <rect x="552" y="126" width="160" height="22" rx="4" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="560" y="142" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#1e3a4c">Todas</text>
+
+  <text x="734" y="118" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#5f7383">Tipo</text>
+  <rect x="734" y="126" width="120" height="22" rx="4" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="742" y="142" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#1e3a4c">Todos</text>
+
+  <rect x="880" y="120" width="100" height="28" rx="6" fill="#1e3a4c"/>
+  <text x="930" y="139" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff">Filtrar</text>
+  <rect x="992" y="120" width="120" height="28" rx="6" fill="#ffffff" stroke="#c5d2dc"/>
+  <text x="1052" y="139" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#3d5364">Exportar CSV</text>
+
+  <rect x="248" y="180" width="900" height="480" rx="10" fill="#ffffff"/>
+  <rect x="248" y="180" width="900" height="44" rx="10" fill="#f4f7fa"/>
+  <rect x="248" y="210" width="900" height="14" fill="#f4f7fa"/>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#3d5364">
+    <text x="268" y="208">Fecha</text>
+    <text x="370" y="208">Concepto</text>
+    <text x="620" y="208">Categor&#237;a</text>
+    <text x="780" y="208">Subcategor&#237;a</text>
+    <text x="980" y="208">Importe</text>
+  </g>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#1e3a4c">
+    <text x="268" y="250">15/06/2026</text>
+    <text x="370" y="250">Factura cliente Norte SA</text>
+    <text x="620" y="250">Ingresos</text>
+    <text x="780" y="250">Ventas</text>
+    <text x="1080" y="250" text-anchor="end" fill="#1f7a4d" font-weight="600">+ 4.250,00 &#8364;</text>
+    <line x1="268" y1="268" x2="1128" y2="268" stroke="#e6ebf0"/>
+
+    <text x="268" y="298">14/06/2026</text>
+    <text x="370" y="298">N&#243;mina junio (demo)</text>
+    <text x="620" y="298">Personal</text>
+    <text x="780" y="298">Salarios</text>
+    <text x="1080" y="298" text-anchor="end" fill="#b33b3b" font-weight="600">&#8722; 12.800,00 &#8364;</text>
+    <line x1="268" y1="316" x2="1128" y2="316" stroke="#e6ebf0"/>
+
+    <text x="268" y="346">12/06/2026</text>
+    <text x="370" y="346">Alquiler oficina ficticia</text>
+    <text x="620" y="346">Inmuebles</text>
+    <text x="780" y="346">Alquiler</text>
+    <text x="1080" y="346" text-anchor="end" fill="#b33b3b" font-weight="600">&#8722; 2.100,00 &#8364;</text>
+    <line x1="268" y1="364" x2="1128" y2="364" stroke="#e6ebf0"/>
+
+    <text x="268" y="394">10/06/2026</text>
+    <text x="370" y="394">Transferencia proveedor Demo</text>
+    <text x="620" y="394">Suministros</text>
+    <text x="780" y="394">Material</text>
+    <text x="1080" y="394" text-anchor="end" fill="#b33b3b" font-weight="600">&#8722; 865,40 &#8364;</text>
+    <line x1="268" y1="412" x2="1128" y2="412" stroke="#e6ebf0"/>
+
+    <text x="268" y="442">08/06/2026</text>
+    <text x="370" y="442">Cobro proyecto Alfa</text>
+    <text x="620" y="442">Ingresos</text>
+    <text x="780" y="442">Servicios</text>
+    <text x="1080" y="442" text-anchor="end" fill="#1f7a4d" font-weight="600">+ 7.980,00 &#8364;</text>
+    <line x1="268" y1="460" x2="1128" y2="460" stroke="#e6ebf0"/>
+
+    <text x="268" y="490">05/06/2026</text>
+    <text x="370" y="490">Electricidad sede demo</text>
+    <text x="620" y="490">Suministros</text>
+    <text x="780" y="490">Energ&#237;a</text>
+    <text x="1080" y="490" text-anchor="end" fill="#b33b3b" font-weight="600">&#8722; 412,75 &#8364;</text>
+    <line x1="268" y1="508" x2="1128" y2="508" stroke="#e6ebf0"/>
+
+    <text x="268" y="538">03/06/2026</text>
+    <text x="370" y="538">Abono tarjeta corporativa</text>
+    <text x="620" y="538">Ingresos</text>
+    <text x="780" y="538">Otros</text>
+    <text x="1080" y="538" text-anchor="end" fill="#1f7a4d" font-weight="600">+ 320,00 &#8364;</text>
+    <line x1="268" y1="556" x2="1128" y2="556" stroke="#e6ebf0"/>
+
+    <text x="268" y="586">01/06/2026</text>
+    <text x="370" y="586">Seguro responsabilidad civil</text>
+    <text x="620" y="586">Otros</text>
+    <text x="780" y="586">Seguros</text>
+    <text x="1080" y="586" text-anchor="end" fill="#b33b3b" font-weight="600">&#8722; 540,00 &#8364;</text>
+  </g>
+
+  <text x="268" y="640" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5f7383">Mostrando 1&#8211;8 de 146 resultados (datos ficticios)</text>
+  <rect x="900" y="620" width="36" height="28" rx="6" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="918" y="639" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#3d5364">&#8249;</text>
+  <rect x="944" y="620" width="36" height="28" rx="6" fill="#2f6f7e"/>
+  <text x="962" y="639" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">1</text>
+  <rect x="988" y="620" width="36" height="28" rx="6" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="1006" y="639" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#3d5364">2</text>
+  <rect x="1032" y="620" width="36" height="28" rx="6" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="1050" y="639" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#3d5364">3</text>
+  <rect x="1076" y="620" width="36" height="28" rx="6" fill="#f4f7fa" stroke="#c5d2dc"/>
+  <text x="1094" y="639" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#3d5364">&#8250;</text>
+
+  <text x="268" y="690" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#7f97a6">Ordenaci&#243;n activa: Fecha &#8595; &#183; Exportaci&#243;n respeta filtros</text>
+</svg>
