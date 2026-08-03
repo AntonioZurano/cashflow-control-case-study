@@ -1,0 +1,6 @@
+fecha;operacion;importe;notas
+15/06/2026;Pago demo comercio Alfa;42,50;Fila valida
+16/06/2026 10:30;Abono ficticio Beta;-120,00;Fecha con hora
+17/06/2026;"Compra, tipografia ""Demo""";15,99 eur.;Importe con sufijo textual de moneda
+18/06/2026;Cargo incompleto;;Fila invalida sin importe
+19/06/2026;Pago demo comercio Alfa;42,50;Posible reimportacion (tarjeta no deduplica)
