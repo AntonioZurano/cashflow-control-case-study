@@ -231,7 +231,7 @@ Las consultas siguientes son **ejemplos representativos**, anonimizados y en oca
 
 **Problema:** mostrar una página de movimientos con la subcategoría resuelta, orden estable y paginación.
 
-**Alcance:** patrón **ilustrativo**. No es una copia literal del `SELECT` de listado del proyecto: en producción el nombre de subcategoría viaja con el movimiento y el listado no depende de este `JOIN` al catálogo. El ejemplo sirve para razonar sobre relación por nombre, orden estable y paginación.
+**Alcance:** patrón **ilustrativo**. No es una copia literal del `SELECT` de listado del proyecto: en la versión documentada el nombre de subcategoría viaja con el movimiento y el listado no depende de este `JOIN` al catálogo. El ejemplo sirve para razonar sobre relación por nombre, orden estable y paginación.
 
 ```sql
 SELECT
