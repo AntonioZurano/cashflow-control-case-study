@@ -216,7 +216,7 @@ erDiagram
 * **Claves foráneas:** no hay `FOREIGN KEY` enforced en SQLite. La integridad es lógica: `created_by` / `updated_by` apuntan a `users.id`; la subcategoría se guarda como **nombre** en el movimiento y se alinea con `subcategories.name`.
 * **Cardinalidades:** un usuario puede asociarse a muchos movimientos; una subcategoría clasifica muchos movimientos; las reglas apuntan a un nombre de subcategoría.
 * **Tipo e importe:** `type` vale `income` o `expense`; `amount` se almacena siempre **positivo**. El signo contable no vive en el importe.
-* **Canal:** `channel` discrimina el origen operativo (`cash`, `card`, `bank` en esta documentación anonimizada).
+* **Canal:** el campo `channel` del modelo público es una **simplificación documental**. En la aplicación real conviven la categoría de origen operativa y la procedencia de importación; aquí se unifican en un solo eje anonimizado (`cash`, `card`, `bank`) para explicar el dominio sin copiar el esquema privado.
 * **Lotes de importación:** no existe tabla `import_batches`; el lote es un UUID en `import_batch_id`.
 * **Sesiones:** se almacenan en un fichero SQLite de sesión separado, no en el diagrama de negocio.
 * **Simplificación pública:** se omiten columnas auxiliares sensibles (`raw_data`, saldos intermedios, etc.) y cualquier valor real de cuentas.
@@ -230,6 +230,8 @@ Las consultas siguientes son **ejemplos representativos**, anonimizados y en oca
 ### Consulta 1 — Listado paginado con relación por nombre
 
 **Problema:** mostrar una página de movimientos con la subcategoría resuelta, orden estable y paginación.
+
+**Alcance:** patrón **ilustrativo**. No es una copia literal del `SELECT` de listado del proyecto: en producción el nombre de subcategoría viaja con el movimiento y el listado no depende de este `JOIN` al catálogo. El ejemplo sirve para razonar sobre relación por nombre, orden estable y paginación.
 
 ```sql
 SELECT
@@ -249,9 +251,9 @@ ORDER BY m.movement_date DESC, m.id DESC
 LIMIT ? OFFSET ?;
 ```
 
-**Explicación:** el `LEFT JOIN` por nombre conserva el movimiento aunque la subcategoría se haya desactivado o el texto no coincida con el catálogo. El segundo criterio `m.id` evita ordenaciones inestables cuando varias filas comparten fecha. `OFFSET` se calcula como `(page - 1) * pageSize` en el servicio.
+**Explicación:** el `LEFT JOIN` por nombre (en este patrón) conserva el movimiento aunque la subcategoría se haya desactivado o el texto no coincida con el catálogo. El segundo criterio `m.id` evita ordenaciones inestables cuando varias filas comparten fecha. `OFFSET` se calcula como `(page - 1) * pageSize` en el servicio.
 
-**Riesgos:** un rename de subcategoría debe actualizar también los movimientos (la aplicación lo hace en cascada lógica). Sin parametrizar, un `LIKE` o una fecha concatenada abriría inyección SQL.
+**Riesgos:** un rename de subcategoría debe actualizar también los movimientos (la aplicación lo hace sobre los movimientos que guardan el nombre). Las reglas de clasificación que referencian el nombre antiguo **no** se reescriben automáticamente en ese mismo paso. Sin parametrizar, un `LIKE` o una fecha concatenada abriría inyección SQL.
 
 **Rendimiento:** el rango sobre `movement_date` beneficia de un índice por fecha (mejora futura; hoy el volumen local es controlado). El `LIMIT` acota el trabajo de serialización JSON.
 
@@ -347,6 +349,8 @@ WHERE movement_date BETWEEN ? AND ?;
 
 **Problema:** distribución para gráficos manteniendo subcategorías sin movimiento en el periodo (o excluyéndolas según la vista).
 
+**Alcance:** patrón **ilustrativo**. No es una copia literal de la agregación del proyecto: la vista publicada agrupa a partir de los movimientos (actividad real). El `LEFT JOIN` desde el catálogo muestra cómo se podrían incluir subcategorías sin filas en el periodo si la UI lo pidiera.
+
 ```sql
 SELECT
     s.id,
@@ -364,7 +368,7 @@ GROUP BY s.id, s.name
 ORDER BY total_expenses DESC;
 ```
 
-El filtro de fechas en el `ON` (no en el `WHERE`) evita eliminar subcategorías sin filas en el periodo. Si la vista solo quiere actividad real, se añade `HAVING COUNT(m.id) > 0`.
+El filtro de fechas en el `ON` (no en el `WHERE`) evita eliminar subcategorías sin filas en el periodo. Si la vista solo quiere actividad real, se añade `HAVING COUNT(m.id) > 0` (o se agrupa solo sobre movimientos, como en el comportamiento documentado de la release).
 
 ### Consulta 6 — Agregación mensual (SQLite)
 
@@ -405,9 +409,9 @@ WHERE source = 'bank'
 LIMIT 1;
 ```
 
-Existen índices únicos parciales sobre referencia externa y huella semántica para `source = 'bank'`. Además hay un criterio de similitud de concepto (aproximación), que no garantiza unicidad absoluta.
+Existen índices únicos parciales sobre referencia externa y huella semántica para `source = 'bank'`. La deduplicación bancaria verificada combina varias capas: detección de duplicados **dentro del propio fichero**, coincidencia **exacta** en base de datos (referencia o huella) y un criterio adicional de **similitud de concepto** cuando el match exacto no basta. Ninguna de esas capas garantiza unicidad absoluta por sí sola.
 
-**Límites:** fecha + concepto + importe solos no bastan. La importación de **tarjeta** no aplica esta deduplicación: reimportar el mismo CSV crea filas nuevas (comportamiento verificado).
+**Límites:** fecha + concepto + importe solos no bastan. La importación de **tarjeta** no aplica esta deduplicación bancaria: reimportar el mismo CSV crea filas nuevas (comportamiento verificado en la release de referencia).
 
 ### Consulta 8 — Persistencia de una importación
 
@@ -554,6 +558,7 @@ Las mejoras documentales de este repositorio público siguen el mismo esquema: r
 * Red local; código privado; `.env` y SQLite fuera de Git.
 * Autenticación por sesión; RBAC en backend; rate limit en login y subidas.
 * Confirmación en restore; backups fuera del repositorio.
+* Las respuestas de error no controlado (`500`) pueden incluir información procedente del error; **revisar y endurecer** lo expuesto al cliente es una mejora pendiente (sin documentar aquí campos ni mensajes internos).
 * Este repo público no incluye código de producción, credenciales, bases, CSV reales ni datos financieros reales.
 
 ---
@@ -624,6 +629,7 @@ En el código de la versión documentada (**v3.2.0**), CashFlow Control **no** u
 * Parte del JavaScript de cliente sigue beneficiándose de mayor modularización.
 * Sin demo pública ejecutable.
 * Importación de lote sin transacción global (fila a fila).
+* Endurecimiento de la información incluida en respuestas de error (`500`) hacia el cliente.
 * TypeScript: evaluación futura / decisión diferida (no hay compromiso de migración en la versión documentada).
 * Trazabilidad administrativa aún mejorable.
 * Validación de Astro en Windows pendiente.
@@ -635,6 +641,7 @@ En el código de la versión documentada (**v3.2.0**), CashFlow Control **no** u
 * Refactorización progresiva de los módulos JavaScript de cliente.
 * Ampliación de pruebas automatizadas (incluidos más flujos bancarios).
 * Mejoras de mensajes de error en importación.
+* Endurecimiento de respuestas de error no controlado hacia el cliente.
 * Evaluación de transacción por lote de importación.
 * Índices adicionales por fecha/canal tras medir el plan de consultas.
 * Evaluación futura de TypeScript (decisión diferida).
